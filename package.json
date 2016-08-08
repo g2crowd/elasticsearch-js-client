@@ -1,0 +1,18 @@
+{
+  "name": "elasticsearch-js-client",
+  "description": "Js Client for Elasticsearch",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g2crowd/elasticsearch-js-client.git"
+  },
+
+  "devDependencies": {
+    "coffee-script": "*",
+    "watch": "*"
+  },
+
+  "scripts": {
+    "watch:src": "node_modules/.bin/watch 'cat src/*.coffee | coffee --stdio -c > lib/main.js' ./src"
+  }
+}
