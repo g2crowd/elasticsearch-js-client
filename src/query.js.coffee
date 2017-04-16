@@ -2,6 +2,7 @@ do (ES = Elastic) ->
   class ES.Query
     constructor: (@model, fn) ->
       @musts = []
+      @shoulds = []
       @filters = []
       @mustNots = []
       @sorts = []
@@ -11,6 +12,10 @@ do (ES = Elastic) ->
 
     must: (value) ->
       @musts.push(value)
+      this
+
+    should: (value) ->
+      @shoulds.push(value)
       this
 
     filter: (value) ->
@@ -33,6 +38,7 @@ do (ES = Elastic) ->
       query:
         bool:
           must: @musts
+          should: @shoulds
           filter: @filters
           must_not: @mustNots
       sort: @sorts
