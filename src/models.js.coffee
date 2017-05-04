@@ -13,6 +13,7 @@ do ($ = jQuery, ES = Elastic) ->
       @indexName = "#{name}_#{env}"
       @storedFields = (item.name for item in @selectAttribute('stored', true))
       @textFields = (item.name for item in @selectAttribute('type', 'text'))
+      @fulltextFields = (item.name for item in @selectAttribute('fulltext', true))
 
     searchPath: ->
       "/#{@indexName}/_search"
