@@ -13,7 +13,9 @@ do ($ = jQuery, ES = Elastic) ->
       @indexName = "#{name}_#{env}"
       @storedFields = (item.name for item in @selectAttribute('stored', true))
       @textFields = (item.name for item in @selectAttribute('type', 'text'))
-      @fulltextFields = (item.name for item in @selectAttribute('fulltext', true))
+      @fulltextFields = for item in @selectAttribute('fulltext', true)
+        boost = if item.boost then "^#{item.boost}" else ''
+        item.name + boost
 
     searchPath: ->
       "/#{@indexName}/_search"
