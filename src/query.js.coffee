@@ -31,7 +31,7 @@ do (ES = Elastic) ->
       @sorts.push(value)
       this
 
-    # { field: 'name', modifier: 'log1p', factor: 1 }
+    # { functions: [{field_value_factor: { field: 'name', modifier: 'log1p', factor: 1 }}] }
     boost: (opts) ->
       @booster = opts
 
@@ -45,8 +45,10 @@ do (ES = Elastic) ->
       else
         query:
           function_score:
+            boost_mode: @booster.boost_mode || 'multiply'
+            score_mode: @booster.score_mode || 'multiply'
             query: query
-            field_value_factor: @booster
+            functions: @booster.functions || []
 
     toJSON: ->
       query = @wrapInBoost
