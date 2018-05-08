@@ -6,8 +6,8 @@
     "type": "git",
     "url": "https://github.com/g2crowd/elasticsearch-js-client.git"
   },
-  "main": "src/namespace.js",
-  "files": ["src/*"],
+  "main": "index.js",
+  "files": ["src/*", "index.js"],
   "devDependencies": {
     "coffee-loader": "^0.9.0",
     "coffeescript": "^2.3.0",
