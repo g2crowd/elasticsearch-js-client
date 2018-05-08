@@ -1,4 +1,4 @@
-import Model from './model';
+const Model = require('./model');
 
 class Client {
   constructor(query, opts) {
@@ -35,4 +35,4 @@ class Client {
   }
 }
 
-export default Client;
+module.exports = Client;

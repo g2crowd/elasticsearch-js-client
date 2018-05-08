@@ -1,5 +1,9 @@
-import Client from 'src/client';
-import Model from 'src/model';
-import Query from 'src/query';
+const Client = require('./src/client');
+const Model = require('./src/model');
+const Query = require('./src/query');
 
-export {Client, Model, Query};
+module.exports = {
+  Client: Client,
+  Model: Model,
+  Query: Query
+};
