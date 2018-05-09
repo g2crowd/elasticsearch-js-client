@@ -1,6 +1,6 @@
-const Client = require('./src/client');
-const Model = require('./src/model');
-const Query = require('./src/query');
+const Client = require('./dist/client');
+const Model = require('./dist/model');
+const Query = require('./dist/query');
 
 module.exports = {
   Client: Client,

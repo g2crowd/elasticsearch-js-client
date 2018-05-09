@@ -7,8 +7,13 @@
     "url": "https://github.com/g2crowd/elasticsearch-js-client.git"
   },
   "main": "index.js",
-  "files": ["src/*", "index.js"],
+  "files": [
+    "dist/*",
+    "index.js"
+  ],
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "coffee-loader": "^0.9.0",
     "coffeescript": "^2.3.0",
     "watch": "*",
@@ -16,7 +21,6 @@
     "webpack-cli": "^2.1.3"
   },
   "scripts": {
-    "build": "webpack",
-    "watch:src": "node_modules/.bin/watch 'cat src/*.coffee | coffee --stdio -c > lib/main.js' ./src"
+    "build": "babel src -d dist"
   }
 }
