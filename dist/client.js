@@ -30,7 +30,8 @@ var Client = function () {
         data: JSON.stringify(this.query.toJSON()),
         dataType: 'json',
         headers: {
-          Authorization: 'Basic ' + btoa(this.opts.userinfo)
+          Authorization: 'Basic ' + btoa(this.opts.userinfo),
+          'Content-Type': 'application/json'
         },
         success: function success(data) {
           if (!opts.success) {

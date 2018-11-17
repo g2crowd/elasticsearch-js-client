@@ -21,6 +21,7 @@ class Client {
       dataType: 'json',
       headers: {
         Authorization: `Basic ${btoa(this.opts.userinfo)}`,
+        'Content-Type': 'application/json'
       },
       success(data) {
         if (!opts.success) {
