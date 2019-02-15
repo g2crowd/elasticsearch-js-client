@@ -1,12 +1,16 @@
 {
   "name": "@g2crowd/elasticsearch-js-client",
   "description": "Javascript Client for Elasticsearch",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-standard-pkg"],
-      ["@pika/plugin-build-web"]
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
     ]
   },
   "private": false,
