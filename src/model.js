@@ -40,4 +40,4 @@ class Model {
   }
 }
 
-module.exports = Model;
+export default Model;
