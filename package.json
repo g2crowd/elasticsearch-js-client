@@ -19,9 +19,9 @@
   "private": false,
   "repository": "https://github.com/g2crowd/elasticsearch-js-client.git",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
     "@pika/plugin-build-node": "^0.3.11",
     "@pika/plugin-build-web": "^0.3.11",
     "@pika/plugin-standard-pkg": "^0.3.11"
