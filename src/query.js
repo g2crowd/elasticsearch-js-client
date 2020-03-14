@@ -51,7 +51,7 @@ class Query {
 
   wrapInBoost(query) {
     if (!this.booster) {
-      return {query};
+      return { query };
     } else {
       return {
         query: {
@@ -59,9 +59,9 @@ class Query {
             boost_mode: this.booster.boost_mode || 'multiply',
             score_mode: this.booster.score_mode || 'multiply',
             query,
-            functions: this.booster.functions || [],
-          },
-        },
+            functions: this.booster.functions || []
+          }
+        }
       };
     }
   }
@@ -72,15 +72,15 @@ class Query {
         must: this.musts,
         should: this.shoulds,
         filter: this.filters,
-        must_not: this.mustNots,
-      },
+        must_not: this.mustNots
+      }
     });
 
     return Object.assign(query, {
       sort: this.sorts,
       from: this.from,
       size: this.size,
-      _source: this.model.storedFields,
+      _source: this.model.storedFields
     });
   }
 }

@@ -1,6 +1,6 @@
 class Model {
   static deserialize(hits) {
-    return hits.map(hit => Object.assign({id: hit['_id']}, hit._source));
+    return hits.map(hit => Object.assign({ id: hit['_id'] }, hit._source));
   }
 
   constructor(indexName, attributes) {

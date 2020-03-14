@@ -31,7 +31,7 @@ class Client {
         const docs = data.hits.hits;
         return opts.success(Model.deserialize(docs), data);
       },
-      error: opts.error,
+      error: opts.error
     });
   }
 }
