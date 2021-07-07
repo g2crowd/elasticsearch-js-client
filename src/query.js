@@ -44,9 +44,9 @@ class Query {
     return (this.booster = opts);
   }
 
-  paginate(opts) {
-    this.size = parseInt(opts.per || 10, 10);
-    return (this.from = (parseInt(opts.page || 1, 10) - 1) * this.size);
+  paginate({ per, page }) {
+    this.size = parseInt(per || '10', 10);
+    return (this.from = (parseInt(page || '1', 10) - 1) * this.size);
   }
 
   wrapInBoost(query) {
