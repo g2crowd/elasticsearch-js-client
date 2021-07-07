@@ -1,19 +1,13 @@
 import Model from './model';
 
 class Client {
-  constructor(query, opts) {
+  constructor(query, opts = {}) {
     this.query = query;
-    if (opts == null) {
-      opts = {};
-    }
     this.opts = opts;
     this.transport = this.opts.transport || window.$;
   }
 
-  send(opts) {
-    if (opts == null) {
-      opts = {};
-    }
+  send(opts = {}) {
     return this.transport.ajax({
       url: this.opts.url,
       type: 'POST',
