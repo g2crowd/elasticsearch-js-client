@@ -1,7 +1,7 @@
 {
   "name": "@g2crowd/elasticsearch-js-client",
   "description": "Javascript Client for Elasticsearch",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "license": "MIT",
   "scripts": {
     "test": "jest"
