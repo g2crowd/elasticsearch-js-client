@@ -1,7 +1,7 @@
 {
   "name": "@g2crowd/elasticsearch-js-client",
   "description": "Javascript Client for Elasticsearch",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "license": "MIT",
   "scripts": {
     "build": "esbuild src/index.js --bundle --platform=node --outfile=dist/index.js",
@@ -25,6 +25,7 @@
   "module": "src/index.js",
   "main": "dist/index.js",
   "files": [
-    "src/*", "dist/*"
+    "src/*",
+    "dist/*"
   ]
 }
