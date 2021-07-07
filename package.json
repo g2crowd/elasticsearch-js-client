@@ -4,6 +4,7 @@
   "version": "1.4.0",
   "license": "MIT",
   "scripts": {
+    "build": "esbuild src/index.js --bundle --platform=node --outfile=dist/index.js",
     "test": "jest"
   },
   "private": false,
@@ -14,6 +15,7 @@
     "@babel/preset-env": "^7.14.7",
     "@jest/globals": "^27.0.6",
     "babel-jest": "^27.0.6",
+    "esbuild": "^0.12.15",
     "jest": "^27.0.6",
     "prettier": "^2.3.2"
   },
@@ -21,7 +23,8 @@
     "jquery": ">=1.6.2"
   },
   "module": "src/index.js",
+  "main": "dist/index.js",
   "files": [
-    "src/*"
+    "src/*", "dist/*"
   ]
 }
