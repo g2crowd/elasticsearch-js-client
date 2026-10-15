@@ -7,7 +7,6 @@
     "build": "esbuild src/index.js --bundle --platform=node --outfile=dist/index.js",
     "test": "jest"
   },
-  "private": false,
   "repository": "https://github.com/g2crowd/elasticsearch-js-client.git",
   "devDependencies": {
     "@babel/cli": "^7.14.5",
@@ -27,5 +26,6 @@
   "files": [
     "src/*",
     "dist/*"
-  ]
+  ],
+  "packageManager": "yarn@4.18.1"
 }
