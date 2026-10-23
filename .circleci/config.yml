@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:14.17.1
+      - image: circleci/node:20.12.2
 
     steps:
       - checkout
@@ -10,6 +10,10 @@ jobs:
       - restore_cache:
           keys:
             - v1-node-modules-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Enable Corepack and activate Yarn 4
+          command: corepack enable && corepack prepare yarn@4.18.1 --activate
 
       - run:
           name: Install dependencies
